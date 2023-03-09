@@ -1,0 +1,25 @@
+@import '~node_modules/modern-normalize/modern-normalize.css';
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.01em;
+
+  color: #ffffff;
+  background-color: #000b1d;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  padding: 0 15px;
+  position: relative;
+
+  @media screen and (min-width: 1024px) {
+    padding: 0 30px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 0 50px;
+  }
+}

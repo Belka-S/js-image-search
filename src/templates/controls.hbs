@@ -1,0 +1,29 @@
+{{! controlsMarkup function }}
+
+<section class='controls container'>
+  <div class='controls__wrap'>
+    <form class='radio-form' id='radio-form'>
+      <span>Load</span>
+      <input id='first' type='radio' name='load-limit' value='30' checked />
+      <label for='first'>30</label>
+      <input id='second' type='radio' name='load-limit' value='90' />
+      <label for='second'>90</label>
+      <input id='third' type='radio' name='load-limit' value='150' />
+      <label for='third'>150</label>
+      <input id='endless' type='radio' name='load-limit' value='162' />
+      <label for='endless'>endless</label>
+    </form>
+    <form class='search-form' id='search-form'>
+      <input
+        class='search'
+        type='text'
+        name='image-query'
+        autocomplete='off'
+        placeholder='Image query...'
+      />
+      <button class='search' type='submit'>Search</button>
+    </form>
+  </div>
+</section>
+
+<div class='gallery container'></div>

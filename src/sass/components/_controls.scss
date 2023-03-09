@@ -1,0 +1,135 @@
+// Header
+.controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: block;
+  padding: 10px 0 20px;
+
+  @media screen and (min-width: 690px) {
+    padding: 20px 0 40px;
+  }
+
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 11, 29, 0.8) 75%,
+    rgba(0, 11, 29, 0) 100%
+  );
+  transition: transform 300ms linear;
+
+  &__wrap {
+    padding: 0 30px;
+
+    @media screen and (min-width: 690px) {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+    }
+  }
+
+  &.hidden-up {
+    transform: translateY(-100%);
+  }
+}
+
+// Form elements
+.radio-form {
+  @media screen and (max-width: 690px) {
+    margin-bottom: 10px;
+  }
+}
+
+.search-form,
+.radio-form {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-around;
+
+  @media screen and (min-width: 690px) {
+    width: 43%;
+  }
+
+  & label,
+  & span {
+    padding: 8px;
+    width: 100%;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.25;
+    letter-spacing: 0.02em;
+  }
+
+  & label {
+    cursor: pointer;
+  }
+
+  & input {
+    appearance: none;
+
+    &::before {
+      content: '';
+      border: 1px solid #089c9c;
+    }
+
+    &:checked + label {
+      color: #ffd774;
+    }
+  }
+}
+
+%btn {
+  padding: 6px;
+
+  width: 45%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+
+  border-color: transparent;
+  border-radius: 25px;
+
+  outline: transparent;
+}
+
+button {
+  &.search,
+  &.more {
+    @extend %btn;
+
+    color: #ffd774;
+    background-color: #089c9c;
+    transition: background-color 250ms linear, border-color 250ms linear;
+
+    &:hover {
+      background-color: teal;
+    }
+
+    &:focus {
+      background-color: #008080;
+      border-color: #fab914;
+    }
+
+    &.more {
+      width: 20%;
+      margin: 0 auto 20px;
+    }
+  }
+}
+
+input {
+  &.search {
+    @extend %btn;
+
+    text-align: center;
+
+    &:hover,
+    &:focus {
+      border-color: #fab914;
+    }
+  }
+}
